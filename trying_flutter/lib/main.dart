@@ -125,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: Row(
+      floatingActionButton:  Column(
         children: [
           FloatingActionButton(
             onPressed: _incrementCounter,
