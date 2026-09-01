@@ -125,21 +125,30 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton:  Column(
+      bottomSheet:  Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),
-          ),
-          FloatingActionButton(
+          Row(
+            children: [
+              FloatingActionButton(
+                onPressed: _incrementCounter,
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              ),
+              FloatingActionButton(
             onPressed: _decrementCounter,
             tooltip: 'Decrement',
             child: const Icon(Icons.remove),
+              ),
+            ],
+            
           ),
-          Slider(value: _slide, onChanged: _slideChange, min:0, max:1),
+          
+          Slider(value: _slide, onChanged: _slideChange, min:0, max:1,),
         ],
+        
       ),
+      
     );
   }
 }
