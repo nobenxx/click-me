@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '${_counter.toStringAsFixed(2)}',
               style: Theme.of(context).textTheme.headlineMedium,
-            ), Text('Drag slider to adjust increment'),
+            ), Text('Drag slider to adjust increment', style: TextStyle(color: Colors.blue),),
           ],
         ),
       ),
@@ -129,6 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisSize: MainAxisSize.min,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
                 onPressed: _incrementCounter,
